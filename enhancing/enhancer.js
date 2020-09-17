@@ -30,8 +30,8 @@ function repair(item) {
 }
 
 function get(item) {
-    return { ...item, get: function(){
-      if this.enhancement === 0 {
+    return { ...item, setName: function(){
+      if(this.enhancement === 0){
         return {...item}
       }else{
         return {...item, name: `[+${this.enhancement}]${this.name}`}
